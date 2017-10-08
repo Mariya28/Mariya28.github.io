@@ -193,27 +193,27 @@ window.onload = function () {
             var lrdepth = this.left.right == null ? 0 : this.left.right.depth;
 
             if (lldepth < lrdepth) {
-                // LR rotation consists of a RR rotation of the left child
+                // LR вращение состоит из RR вращения левого ребенка
                 this.left.rotateRR();
-                // plus a LL rotation of this node, which happens anyway
-            }
+               } 
+            // плюс LL вращение этого узла
             this.rotateLL();
         } else if (ldepth + 1 < rdepth) {
-            // RR or RL rotation
+            // RR или RL вращения
             var rrdepth = this.right.right == null ? 0 : this.right.right.depth;
             var rldepth = this.right.left  == null ? 0 : this.right.left.depth;
 
             if (rldepth > rrdepth) {
-                // RR rotation consists of a LL rotation of the right child
+                // RR вращения состоит из LL вращения права ребенка
                 this.right.rotateLL();
-                // plus a RR rotation of this node, which happens anyway
+                // плюс RR вращение этого узла
             }
             this.rotateRR();
         }
     };
 
     AVLTree.prototype.rotateLL = function() {
-        // the left side is too long => rotate from the left (_not_ leftwards)
+        // LL вращение
         var nodeBefore = this.node;
         var rightBefore = this.right;
         this.node = this.left.node;
@@ -227,7 +227,7 @@ window.onload = function () {
     };
 
     AVLTree.prototype.rotateRR = function() {
-        // the right side is too long => rotate from the right (_not_ rightwards)
+        // RR вращение
         var nodeBefore = this.node;
         var leftBefore = this.left;
         this.node = this.right.node;
