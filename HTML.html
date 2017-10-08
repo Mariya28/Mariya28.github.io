@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AVL tree</title>
+    <script src="algorithm_1.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+    <canvas id="canvas" width="800" height="500"> </canvas>
+
+    <div id="button_div">
+        <div class="algo_button">
+            <img src="img/blue_play.png" width="30" height="30" class="button algo_btn" id="button_work">
+            <img src="img/pausa1.png" width="30" height="30" id="button_pause">
+            <img src="img/blue_stop.png" width="30" height="30" id="button_stop">
+            <img src="img/blue_arrow.png" width="30"  id="button_next_step">
+
+        </div>
+
+        <div class="canvas_button">
+            <span>
+				speed:
+				<input type="range" min="1" max = "5" step="0.5" value="3" id="speed" title="speed">
+			</span>
+
+            <input type="text" id="node_value" value="">
+            <img src="img/plus2.png" width="30" height="30" id="button_add">
+        </div>
+    </div>
+
+    <table cellspacing = 1 border = 2 cellpadding = 3 rules = none width = 0%>
+        <br /> values: <tr id="node_list" border = 1></tr>
+    </table>
+
+
+
+
+
+</body>
+</html>
