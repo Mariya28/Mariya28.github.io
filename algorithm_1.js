@@ -3,11 +3,11 @@ window.onload = function () {
     // Цвета
     var WHITE_COLOR = "#ffffff",
         BLACK_COLOR = "#000",
-        CURRENT_NODE_COLOR = "#ff761f",
-        NODE_COLOR = "#e5ffbb",
-        ARC_COLOR = "#ffeb2f",
-        DEPTH_COLOR = "#ca3fff",
-        BALANCE_COLOR = "#ff5aa2";
+        CURRENT_NODE_COLOR = "#acff66",
+        NODE_COLOR = "#9ec6ff",
+        ARC_COLOR = "#0004ff",
+        DEPTH_COLOR = "#cb28ff",
+        BALANCE_COLOR = "#ffbb3c";
 
     function Point(x, y) {
         this.x = x;
