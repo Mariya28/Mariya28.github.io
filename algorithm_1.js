@@ -87,16 +87,16 @@ window.onload = function () {
         currentStep(currentArg); // Вызываем текущий шаг без задержки
     });
 
-    buttonAdd = document.getElementById("button_add");
     buttonAdd.addEventListener("click", function (event) {
-        var nodeValue = inputNodeValue.value;
-        nodeList.push(nodeValue); // Добавление в очередь
+        if (Number.isInteger(inputNodeValue)){
+            var nodeValue = inputNodeValue.value;
+            nodeList.push(nodeValue); // Добавление в очередь
+            // Добавление в таблицу
+            var cell = tableRowNodeList.insertCell(nodeList.length - 1);
+            cell.innerHTML = nodeValue.toString();
 
-        // Добавление в таблицу
-        var cell = tableRowNodeList.insertCell(nodeList.length - 1);
-        cell.innerHTML = nodeValue.toString();
-
-        inputNodeValue.value = "";
+            inputNodeValue.value = "";
+        }
     });
 
     function getSpeed() {
