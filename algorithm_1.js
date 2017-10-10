@@ -88,6 +88,7 @@ window.onload = function () {
     });
 
     buttonAdd.addEventListener("click", function (event) {
+        if (isNumeric(inpitNodeValue)){
             var nodeValue = inputNodeValue.value;
             nodeList.push(nodeValue); // Добавление в очередь
             // Добавление в таблицу
@@ -95,6 +96,7 @@ window.onload = function () {
             cell.innerHTML = nodeValue.toString();
 
             inputNodeValue.value = "";
+        }
     });
 
     function getSpeed() {
