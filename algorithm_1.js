@@ -88,15 +88,14 @@ window.onload = function () {
     });
 
     buttonAdd.addEventListener("click", function (event) {
-        if (Number.isInteger(inputNodeValue)){
             var nodeValue = inputNodeValue.value;
+             if (isFinite(nodeValue)){
             nodeList.push(nodeValue); // Добавление в очередь
             // Добавление в таблицу
             var cell = tableRowNodeList.insertCell(nodeList.length - 1);
             cell.innerHTML = nodeValue.toString();
-
+             }
             inputNodeValue.value = "";
-        }
     });
 
     function getSpeed() {
