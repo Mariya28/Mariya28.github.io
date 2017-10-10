@@ -88,7 +88,7 @@ window.onload = function () {
     });
 
     buttonAdd.addEventListener("click", function (event) {
-        if (Number.isInteger(inputNodeValue)){
+        if (inputNodeValue.isNumeric){
             var nodeValue = inputNodeValue.value;
             nodeList.push(nodeValue); // Добавление в очередь
             // Добавление в таблицу
