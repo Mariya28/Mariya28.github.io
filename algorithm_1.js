@@ -88,13 +88,14 @@ window.onload = function () {
     });
 
     buttonAdd.addEventListener("click", function (event) {
-        if (isFinite(inputNodeValue.value)){
+        if (isNumeric(inputNodeValue.value)){
             var nodeValue = inputNodeValue.value
             nodeList.push(nodeValue); // Добавление в очередь
             // Добавление в таблицу
             var cell = tableRowNodeList.insertCell(nodeList.length - 1);
             cell.innerHTML = nodeValue.toString();
             inputNodeValue.value = "";
+            return
         }
     });
 
